@@ -1,151 +1,168 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<head>
-<link rel="stylesheet" type="text/css" media="all" href="reset.css" />
-<link rel="stylesheet" type="text/css" media="all" href="text.css" />
-<link rel="stylesheet" type="text/css" media="all" href="960.css" />
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
-<link href="css/galleria.css" rel="stylesheet" type="css" media="screen"> 
+<!DOCTYPE HTML>
+<!--
+	Caminar by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Haward Ketoyo Msatsi</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
 
-<script type="text/javascript" src="jquery-1.2.6.min.js"></script> 
-<script type="text/javascript" src="jquery.galleria.js"></script> 
-<script type="text/javascript"> 
-jQuery(function($) { 
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">Haward Ketoyo Msatsi <span>aka Tosh</span></a></div>
+			</header>
 
-$('ul.gallery').galleria({
-			history   : true, // activates the history object for bookmarking, back-button etc.
-			clickNext : true, // helper for making the image clickable
-			insert    : '#main_image', // the containing selector for our main image
-			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
-				
-				// fade in the image & caption
-				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
-					image.css('display','none').fadeIn(1000);
-				}
-				caption.css('display','none').fadeIn(600);
-				
-				// fetch the thumbnail container
-				var _li = thumb.parents('li');
-				
-				// fade out inactive thumbnail
-				_li.siblings().children('img.selected').fadeTo(500,0.3);
-				
-				// fade in active thumbnail
-				thumb.fadeTo('fast',1).addClass('selected');
-				
-				// add a title for the clickable image
-				image.attr('title','Next image >>');
-			},
-			onThumb : function(thumb) { // thumbnail effects goes here
-				
-				// fetch the thumbnail container
-				var _li = thumb.parents('li');
-				
-				// if thumbnail is active, fade all the way.
-				var _fadeTo = _li.is('.active') ? '1' : '0.3';
-				
-				// fade in the thumbnail when finnished loading
-				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1000);
-				
-				// hover effects
-				thumb.hover(
-					function() { thumb.fadeTo('fast',1); },
-					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
-				)
-			}
-		});
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
 
+				<!-- One -->
+					<section id="one" class="wrapper style1">
 
-
-
-
-
-}); 
-</script>
-
-<style media="screen,projection" type="text/css">
-	
-	/* BEGIN DEMO STYLE */
-
-	.gallery li{width:80px;height:60px;border:3px double #111;margin: 0 2px;background:#000; float:left;}
-	.gallery {width:300px;}
-
-    </style>
-
-
-
-
-<title>Ketoyos Website</title>
-</head>
-
-<body>
-
-
-<div class="container_12" id="topContent">
-    <div class="grid_4">
-            <h2>HAWARD KETOYO MSATSI</h2>
-            <h3>HAWARD KETOYO MSATSI</h3>
-    </div>
-    <div class="grid_8" id="rightTopContent">
-            <a href="#">Home</a> |
-            <a href="#">About</a> |
-            <a href="#">contact</a>
-    </div>
-</div>
-
-
-    <div class="clear">&nbsp;</div>
-
-<div class="container_12">
-<div class="grid_4">    
-        <ul class="gallery"> 
-		<li class="active"><img src="1.jpg" title="Little fun" alt="1"></li> 
-            <li><img src="2.jpg" title="Nice Sky HDR" alt="2"></li> 
-            <li><img src="3.jpg" title="Cool Colors" alt="3"></li> 
-            <li><img src="4.jpg" title="A beautiful example of HDR on an Indoor scene" alt="4"></li> 
-            <li><img src="5.jpg" title="Sweet lighthouse photo displaying nice contrast" alt="5"></li> 
-            <li><img src="6.jpg" title="The Incredible HDR Bunny" alt="6"></li> 
-            <li><img src="7.jpg" title="Basílica del Pilar, Zaragoza, Aragón" alt="7"></li> 
-            <li><img src="8.jpg" title="Burg ehrenberg HDR photo" alt="8"></li> 
-            <li><img src="9.jpg" title="Angers-Cathédrale" alt="9"></li> 
-            <li><img src="10.jpg" title="Almost looks like a painting" alt="10"></li> 
-            <li><img src="11.jpg" title="BMW Z8" alt="11"></li> 
-            <li><img src="12.jpg" title="Awesome night HDR photo" alt="12"></li> 
-		</ul>
-        
-	</div>
-	<!-- end .grid_4 -->
-	<div class="grid_8">
-
-			<div id="main_image"></div>
-	</div>
-    </div>
-    <div class="clear">&nbsp;</div>
-    <div class="container_16">
-    <div class="grid_2">
-		<p>&nbsp;</p>
-	</div>
-    
-      <div class="grid_12" id="galleryInformation">
-		<h2>HAWARD KETOYO MSATSI</h2>
-        <p>Haward Ketoyo Msatsi attended the Jomo Kenyatta University in Kenya, where he graduated with a Bachelors Degree in Mathematics and Computer Science. He went on to attend the African Institute for Mathematical Sciences, Senegal, for postgraduate studies. He later persued a Master of Philosophy deree in 'Scientific Computing and Industrial Modelling' postgraduate programme at the National Institute for Mathematical Sciences, Ghana. Haward is currently doin a PhD in Biodata Analytics and Computational Genomics at the same institution. His research interests are applying Machine Learning in RNASeq analysis.
+						<div class="image fit flush">
+							<img src="8.jpg" alt="" />
+						</div>
+						<header class="special">
+							<h2>Ketoyo Msatsi</h2>
+							<p>Sleepless Nights Pay</p>
+						</header>
+						<div class="content">
+<h2>Biography</h2>
+<p>Haward Ketoyo Msatsi attended the Jomo Kenyatta University in Kenya, where he graduated with a Bachelors Degree in Mathematics and Computer Science. He went on to attend the African Institute for Mathematical Sciences, Senegal, for postgraduate studies. He later persued a Master of Philosophy deree in 'Scientific Computing and Industrial Modelling' postgraduate programme at the National Institute for Mathematical Sciences, Ghana. Haward is currently doin a PhD in Biodata Analytics and Computational Genomics at the same institution. His research interests are applying Machine Learning in RNASeq analysis.
 		</p>
+<h2>Teaching Activities</h2>
+<ul >
+  <li>2013-2014 Teacher at St Johns Secondary School Sirende-Kitale Kenya, Mathematics and Computer Studies</li>
+  <li>Partial Differential Equations</li>
+  <li>Ordinary Differential Equations</li>
+  <li></li>
+</ul>
+
+<h2>Other Experiences</h2>
+<ul >
+  <li>RNA Seq Analysis In a team of five we were able to carry out an exercise for accreditation in RNA Sequencing (RNA-Seq) analyses for KNUST-H3ABioNet.</li> 
+  <li>Variant Calling In a team of five we were able to carry out an exercise for accreditation in Variant calling for KNUST-H3ABioNet.</li>
+  <li></li>
+</ul>	
+	<h2>Book Publications</h2>
+        <ul >
+        <li>Secondary Mathematics Book1</li>
+        <li>Secondary Mathematics Book2</li>
+        <li>Secondary Mathematics Book3</li>
+        <li>Secondary Mathematics Book4</li>
+        <li></li>
+        </ul>
+        <h2>Journal Papers Publications</h2>
+        <ul >
+        <li>Classification of Tumours from Breast Cancer Metastasized Sites using Artificial Neural Network on Somatic Mutation Data - Under review.</li>
+        <li></li>
+        <li></li>
+        </ul>
         
-      <h2>Research Summary</h2>
+        <h2>Conferences and Worksops attended</h2>
+        <ul >
+        <li>3rd-5th July 2019: Presented a poster “Development of Classifier for Breast Cancer Metastasized Sites Using Artificial NeuralNetwork”, at the 2019 Associationfor Computing Machinery-Computing and Sustainable Societies (ACM COMPASS) Conference.</li>
+        <li> 8th May - 22 June 2018: Attended and completed the 1st WASLITBRe Postgraduate Bioinformatics Workshop at Covenant University Nigeria.</li>
+        <li> 8th March - 22 April 2019: Attended and completed the 2nd WASLITBRe Postgraduate Bioinformatics Workshop at Kwame Nkuruma University of Science and Technology, Ghana.</li>
+        <li>Oct-Nov 2018 Attended and completed Introduction to Bioinformatics by H3AfricaBioNet at Kwame Nkuruma University of Science and Technology, Ghana Classroom</li>
+        <li>Oct 2018 Attended and completed Ensemble Training workshop at at Kwame Nkuruma University of Science and Technology, Kumasi Ghana</li>
+        <li>March 2016 Attended Next Eistein Forum by the African Institute for Mathematical Sciences in Darkar, Senegal</li>
+        <li>June 2016 Attended Baobab MasterCard Scholars Summit held at Ashesi University in Accra, Ghana</li>
+        </ul>
+        <h2>Research Summary</h2>
        <p>
        The primary site of a given cancer and its histopathology are two major factors that predict the clinical behaviour of a human cancer. However due to metastasis, primary and secondary sites can not be distinguished in some instances even after a careful radiological examination. It becomes a great challenge to the effectiveness of the cancer treatment method used since some treatment methods like surgery are applied depending on the nature of the primary site of the cancer. If the primary site of a given cancer is identified correctly, suitable treatment for the cancer in question may be applied making the treatment method more effective. There has also been an enormous increase in the amount of sequenced gene data due to the development in sequencing technologies. However application of simple linear classifiers on the numerous data available is a major obstacle in improving classification performance. To address these challenges, a cancer primary site classifier was developed by applying the Artificial Neural Network (ANN) algorithm on somatic mutation data from the Catalogue of Somatic Mutations in Cancer (COSMIC). The classifier was able to classify cancer sites that are primarily metastasized by breast cancer with an accuracy of 77.03\%. Further more, a combination of genes and mutation descriptions was found to be the best feature combination for classification of cancer primary sites.</p>
          
-       
-       <div id="footer"><a href="http://www.bryantsmith.com">Credit</a></div>
-	</div>
-    
-        <div class="grid_2">
-		<p>&nbsp;</p>
-	</div>
-    </div>
-    
-</div>
+						</div>
+					</section>
 
-</body>
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<header>
+							<h2>A little of My Photography</h2>
+							<p>There is more to life than just books</p>
+						</header>
+						<div class="content">
+							<div class="gallery">
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/1.jpg"><img src="images/pic01.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper">
+						<div class="spotlight">
+							<div class="image flush"><img src="images/1.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Olumo Rock Nigeria</h3>
+								<p>I took this picture while at Olumo rock in Nigeria, It is a site rich in history of the Yoruba people of Nigeria.</p>
+							</div>
+						</div>
+						<div class="spotlight alt">
+							<div class="image flush"><img src="images/2.jpg" alt="" /></div>
+							<div  class="inner">
+								<h3>Olumo Rock Nigeria</h3>
+								<p>Professor Cisse Dr. Fofana and I having fun at at Olumo Rock Nigeria</p>
+							</div>
+						</div>
+						<div class="spotlight">
+							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+							<div class="inner">
+								<h3>Boti Falls</h3>
+								<p>Mastercard team with me.</p>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; *TM <a href="">FB</a> Ttr <a href="">Wsp</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="jquery.min.js"></script>
+			<script src="jquery.poptrox.min.js"></script>
+			<script src="skel.min.js"></script>
+			<script src="util.js"></script>
+			<script src="main.js"></script>
+
+	</body>
 </html>
